@@ -1,0 +1,112 @@
+Certainly! Here's a comprehensive cheat sheet for Docker commands to help you build container images, along with comments explaining each command:
+
+docker build -t <image_name> <path_to_dockerfile>
+
+Builds a Docker image using the Dockerfile located at the specified path and tags it with the given name.
+docker run -d --name <container_name> <image_name>
+
+Runs a container based on the specified image in the background and assigns it a name.
+docker ps
+
+Lists all running containers.
+docker stop <container_id>
+
+Stops a running container based on the specified container ID.
+docker rm <container_id>
+
+Removes a stopped container based on the specified container ID.
+docker images
+
+Lists all locally available Docker images.
+docker rmi <image_id>
+
+Removes a Docker image based on the specified image ID.
+docker pull <image_name>
+
+Pulls a Docker image from a remote repository.
+docker push <image_name>
+
+Pushes a Docker image to a remote repository.
+docker exec -it <container_id> <command>
+
+Executes a command within a running container specified by the container ID.
+docker logs <container_id>
+
+Displays the logs of a running container specified by the container ID.
+docker buildx create --use
+
+Enables experimental Docker CLI features, including the ability to build multi-platform images.
+docker-compose up
+
+Starts containers defined in the docker-compose.yml file.
+docker-compose down
+
+Stops and removes containers defined in the docker-compose.yml file.
+docker-compose logs <service_name>
+
+Displays the logs of a specific service defined in the docker-compose.yml file.
+docker save -o <output_image_file.tar> <image_name>
+
+Saves a Docker image to a tar file.
+docker load -i <input_image_file.tar>
+
+Loads a Docker image from a tar file.
+docker inspect <container_id>
+
+Retrieves detailed information about a container.
+docker network create <network_name>
+
+Creates a Docker network for containers to communicate with each other.
+docker volume create <volume_name>
+
+Creates a Docker volume for persistent data storage.
+docker system prune
+
+Removes unused Docker resources such as stopped containers and unused images.
+docker-compose build
+
+Builds Docker images defined in the docker-compose.yml file.
+docker-compose restart <service_name>
+
+Restarts a specific service defined in the docker-compose.yml file.
+docker-compose stop
+
+Stops containers defined in the docker-compose.yml file without removing them.
+Remember to replace <image_name>, <container_name>, <path_to_dockerfile>, <container_id>, <image_id>, <command>, <network_name>, <volume_name>, <output_image_file.tar>, <input_image_file.tar>, and <service_name> with the appropriate values based on your
+
+
+ needs.
+
+Please note that Docker commands may vary slightly depending on the Docker version and the specific use case.
+
+
+The .bashrc file is a script that is executed whenever you start a new interactive Bash shell session. It allows you to customize your shell environment and define aliases, functions, environment variables, and other settings that can make your work easier.
+
+Here are a few examples of how you can use the .bashrc file to enhance your workflow:
+
+    Aliases: Define shortcuts for commonly used commands. For example:
+    alias ll='ls -alF'
+    alias ..='cd ..'
+    alias grep='grep --color=auto'
+    After adding these aliases to your .bashrc file, you can use them in your terminal. For instance, typing "ll" will execute "ls -alF".
+
+    Environment Variables: Set variables that affect your shell session. For example:
+    export JAVA_HOME="/usr/lib/jvm/java-11"
+    export PATH="$PATH:$JAVA_HOME/bin"
+    These lines set the JAVA_HOME environment variable and add the Java executable to the PATH, allowing you to run Java commands conveniently.
+
+    Functions: Define custom functions to automate repetitive tasks. For example:
+    mkcd() {
+    mkdir -p "$1" && cd "$1"
+    }
+    This function creates a directory and immediately changes into it. You can use it by typing "mkcd directory_name".
+
+    Prompt Customization: Customize your shell prompt to display additional information. For example:
+    PS1='\u@\h:\w$ '
+    This will display the username, hostname, and current working directory in the prompt.
+
+To make your changes take effect, save the modifications to your .bashrc file and either restart your shell session or run the command source ~/.bashrc in your terminal to reload the file.
+
+Remember, the .bashrc file is located in your home directory (~/.bashrc). Be cautious when making changes and ensure you understand the consequences of any modifications you make.
+
+These are just a few examples, and you can explore and experiment with various settings and configurations to tailor your shell environment to your preferences and make your work more efficient.
